@@ -122,6 +122,7 @@ MQTTブローカーを介して `robots_client.py` と通信します。
 
 ```bash
 python robots_client.py
+
 **2. マネージャーの起動 (送信側)**
 別のターミナルで実行します。
 
