@@ -1,4 +1,4 @@
-# LLM-Interrupt-System2025
+# LLM-Interrupt-System2026
 ## プロジェクト名
 
 山本研究室（知的制御研究室）LLMチーム2026卒業研究制作物
