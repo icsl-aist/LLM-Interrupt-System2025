@@ -142,3 +142,10 @@ cd AKARI_llm
 source /home/aitclab2011/AKARI_llm/venv_grpc/bin/activate
 /bin/python /home/aitclab2011/AKARI_llm/akari_mqtt_subscriber.py
 ```
+
+**4. 指示の入力**
+`manager.py` を実行しているターミナルで、`order` コマンドに続けて実行したいユーザータスクを入力します。
+
+```bash
+🧑 指令入力 > order AKARIを冷蔵庫に連れてって
+```
