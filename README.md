@@ -106,40 +106,11 @@ MQTTブローカーを介して `robots_client.py` と通信します。
 1. **ライブラリのインストール**
    ```bash
    pip install -r requirements.txt
-設定ファイルの編集 (config.py)
 
-ROBOTS: Kachaka/Akariの実機IPアドレスに変更
+### 実行手順
 
-MQTT_BROKER: MQTTブローカーのアドレスを指定
+**1. ロボットクライアントの起動 (受信側)**
+ロボットを制御するPCで実行します。
 
-PROMPTS: 使用するJSONファイルのパスを確認（デフォルトで re_create_task_en.json 等が指定されています）
-
-APIキーの設定 環境変数 OPENAI_API_KEY を設定してください。
-
-Akari側の準備 (必須) 本システムを実行する前に、Akari本体のPC（内部Linux） でMQTT受信プログラムを起動しておく必要があります。 これを行わないと、Akariへの指示（発話や表情制御）が反映されません。
-
-Akari PCにSSH接続、または直接操作で以下のコマンドを実行し、待機状態にしてください。
-
-Bash
-
-cd AKARI_llm
-source /home/aitclab2011/AKARI_llm/venv_grpc/bin/activate
-/bin/python /home/aitclab2011/AKARI_llm/akari_mqtt_subscriber.py
-実行手順
-1. ロボットクライアントの起動 (受信側) ロボットを制御するPCで実行します。
-
-Bash
-
+```bash
 python robots_client.py
-起動すると ✅ MQTTブローカー接続開始 と表示され、待機状態になります。
-
-2. マネージャーの起動 (送信側) 別のターミナルで実行します。
-
-Bash
-
-python manager.py
-3. 指示の入力 manager.py のプロンプトに以下のように入力して実行します。
-
-Bash
-
-🧑 指令入力 > order キッチンに行って挨拶して
