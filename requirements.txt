@@ -1,0 +1,6 @@
+kachaka-api
+akari-client
+openai>=1.0.0
+paho-mqtt>=2.0.0
+aiomqtt
+grpcio

@@ -1,0 +1,12 @@
+state_kachaka = await a.state_object_kachaka()
+state_akari = await b.state_object_akari()
+
+if state_kachaka == "RUNNING":
+    await a.stop_task_kachaka()
+if state_akari == "RUNNING":
+    await b.stop_task_akari()
+
+locations = await a.get_locations_kachaka()
+
+await a.docking_akari()
+await a.move_to_location("冷蔵庫")

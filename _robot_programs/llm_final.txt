@@ -1,0 +1,19 @@
+await a.speak_kachaka("よし、今日も張り切って仕事しよう！")
+await b.speak_akari("カチャカ、私を棚から降ろしてくれない？冷蔵庫に行きたいんだ。")
+await a.speak_log("よし、任せて！冷蔵庫に行く準備をするね。")
+
+state_kachaka = await a.state_object_kachaka()
+state_akari = await b.state_object_akari()
+
+if state_kachaka == "RUNNING":
+    await a.stop_task_kachaka()
+if state_akari == "RUNNING":
+    await b.stop_task_akari()
+
+locations = await a.get_locations_kachaka()
+
+await b.speak_akari("どこに連れてってくれるの？楽しみだな。")
+await a.speak_kachaka("冷蔵庫だよ。すぐに出発するから準備してね。")
+
+await a.docking_akari()
+await a.move_to_location("冷蔵庫")
