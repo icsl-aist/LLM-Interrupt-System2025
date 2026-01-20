@@ -122,19 +122,23 @@ MQTTブローカーを介して `robots_client.py` と通信します。
 
 ```bash
 python robots_client.py
-2. マネージャーの起動 (送信側) 別のターミナルで実行します。
+```
 
-Bash
+**2. マネージャーの起動 (送信側)**
+別のターミナルで実行します。
 
+```bash
 python manager.py
-**3. Akari側の準備 ** 本システムを実行する前に、Akari本体のPC（内部Linux） でMQTT受信プログラムを起動しておく必要があります。 これを行わないと、Akariへの指示（発話や表情制御）が反映されません。
+```
+
+**3. Akari側の準備**
+本システムを実行する前に、**Akari本体のPC（内部Linux）** でMQTT受信プログラムを起動しておく必要があります。
+これを行わないと、Akariへの指示（発話や表情制御）が反映されません。
 
 Akari PCにSSH接続、または直接操作で以下のコマンドを実行し、待機状態にしてください。
 
-Bash
-
+```bash
 cd AKARI_llm
 source /home/aitclab2011/AKARI_llm/venv_grpc/bin/activate
 /bin/python /home/aitclab2011/AKARI_llm/akari_mqtt_subscriber.py
-
-
+```
