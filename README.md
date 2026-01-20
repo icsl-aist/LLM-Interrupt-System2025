@@ -34,7 +34,6 @@ LLM（ChatGPT）との通信や、プロンプト管理を行うモジュール�
 |------------|------|
 | `function_list_kachaka.py` | Kachaka用機能（移動、棚運び、発話、ガード処理） |
 | `function_list_akari.py` | Akari用機能（M5Stack表情、首振り、発話） |
-| *(その他)* | `speak_.py` や `z_house.py` 等の補助・バックアップファイル |
 
 ### 📂 `_robot_programs/` (生成コード保存先)
 LLMによって自動生成されたスクリプトが保存されます。
