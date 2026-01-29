@@ -116,6 +116,43 @@ MQTTブローカーを介して `robots_client.py` と通信します。
 
    ```bash
    export OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxx"
+   
+### ⚠️ 重要：ネットワーク設定とIPアドレス
+本システムはWi-Fiまたは有線LANを介して通信します。
+通信エラーを防ぐため、以下の設定を確認してください。
+
+#### 1. 推奨ネットワーク環境
+* **Akari本体 (AKARI-PC)** は、初めてプログラムを実行する場合には **有線LAN接続** で運用することを推奨します。
+    * 無線接続の場合、IPアドレスの変動や通信断絶により、プログラムを理解していないと動作不能になるリスクが高まります。
+
+#### 2. IPアドレスの整合性チェック
+実行前に、以下のアドレス設定が現在のネットワーク環境と一致しているか確認してください。
+
+**① Akari側のMQTT設定確認**
+Akari本体内にある `akari_mqtt_subscriber.py` を開き、以下の変数が正しいアドレスになっているか確認してください。
+```python
+# akari_mqtt_subscriber.py 内
+BROKER_ADDRESS = "XXX.XX.XX.XX"
+
+**② システム設定ファイル (Akari) の確認**
+本システムの config.py を開き、AkariのIPアドレスが **①のアドレス** と一致しているか確認してください。
+# config.py 内
+ROBOTS = {
+    "akari": {
+        "address": "XXX.XX.XX.XX",
+        # ...
+    }
+}
+
+**③ システム設定ファイル (Kachaka) の確認**
+同様に config.py 内で、KachakaのAPI接続アドレスが正しいか確認してください。
+# config.py 内
+ROBOTS = {
+    "kachaka": {
+        "address": "XXX.XX.XX.XX:XXXXX",
+        # ...
+    }
+}
 
 ### 実行手順
 
