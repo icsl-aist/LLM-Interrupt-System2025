@@ -108,6 +108,7 @@ MQTTブローカーを介して `robots_client.py` と通信します。
 1. **ライブラリのインストール**
    ```bash
    pip install -r requirements.txt
+   ```
 
 2. **OpenAI APIキーの設定**
    システムはGPT-4oを使用するため、APIキーが必要です。環境変数として設定してください。（APIキーは研究室のデスクトップPC内に保存）
@@ -116,6 +117,7 @@ MQTTブローカーを介して `robots_client.py` と通信します。
 
    ```bash
    export OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxx"
+   ```
    
 ### ⚠️ 重要：ネットワーク設定とIPアドレス
 本システムはWi-Fiまたは有線LANを介して通信します。
