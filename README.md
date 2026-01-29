@@ -15,6 +15,8 @@
 | `config.py` | IPアドレス、APIキー、ファイルパスなどのシステム全体設定 |
 | `robot_api_manager.py` | KachakaとAkariの接続・初期化を管理するシングルトンクラス |
 | `requirements.txt` | 必要なPythonライブラリの一覧 |
+| `akari_mqtt_subscriber.py` | **【Akari本体用】** Akari内部で動作し、MQTT経由で発話や制御コマンドを受け取る常駐プログラム |
+| `speak_audio.py` | **【Akari本体用】**Google Cloud TTSを使用した音声合成・再生機能を提供するモジュール（上記で使用） |
 
 ---
 
