@@ -131,7 +131,7 @@ MQTTブローカーを介して `robots_client.py` と通信します。
 実行前に、以下のアドレス設定が現在のネットワーク環境と一致しているか確認してください。
 
 **① Akari側のMQTT設定確認**
-Akari本体内にある `akari_mqtt_subscriber.py` を開き、以下の変数が正しいアドレスになっているか確認してください。
+Akari本体内にある `akari_mqtt_subscriber.py` を開き、以下の変数がAKARI本体のIPアドレスになっているか確認してください。
 ```python
 # akari_mqtt_subscriber.py 内
 BROKER_ADDRESS = "XXX.XX.XX.XX"
