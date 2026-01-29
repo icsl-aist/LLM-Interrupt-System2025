@@ -133,9 +133,11 @@ Akari本体内にある `akari_mqtt_subscriber.py` を開き、以下の変数�
 ```python
 # akari_mqtt_subscriber.py 内
 BROKER_ADDRESS = "XXX.XX.XX.XX"
+```
 
 **② システム設定ファイル (Akari) の確認**
 本システムの config.py を開き、AkariのIPアドレスが **①のアドレス** と一致しているか確認してください。
+```python
 # config.py 内
 ROBOTS = {
     "akari": {
@@ -143,9 +145,11 @@ ROBOTS = {
         # ...
     }
 }
+```
 
 **③ システム設定ファイル (Kachaka) の確認**
 同様に config.py 内で、KachakaのAPI接続アドレスが正しいか確認してください。
+```python
 # config.py 内
 ROBOTS = {
     "kachaka": {
@@ -153,6 +157,7 @@ ROBOTS = {
         # ...
     }
 }
+```
 
 ### 実行手順
 
