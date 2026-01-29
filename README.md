@@ -138,7 +138,7 @@ BROKER_ADDRESS = "XXX.XX.XX.XX"
 ```
 
 **② システム設定ファイル (Akari) の確認**
-本システムの config.py を開き、AkariのIPアドレスが **①のアドレス** と一致しているか確認してください。
+本システムの config.py を開き、akariのaddressが **①のアドレス** と一致しているか確認してください。
 ```python
 # config.py 内
 ROBOTS = {
